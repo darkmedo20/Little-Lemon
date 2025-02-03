@@ -1,9 +1,9 @@
-from django.urls import path
-from django.contrib import admin
-from .views import sayHello
+
+from django.urls import path, include
+from rest_framework import routers
 from . import views
 
 urlpatterns = [
-    path('', views.index, name='index'),
-    #path('',sayHello, name="sayHello"),
+    path('', views.MenuItemsView.as_view()),
+    path('<int:pk>', views.SingleMenuItemView.as_view()),
 ]

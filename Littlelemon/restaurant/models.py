@@ -8,6 +8,6 @@ class Booking(models.Model):
     
 class Menu(models.Model):
     Title = models.CharField(max_length=255)
-    Price = models.DecimalField(max_digits=3, decimal_places=2)
+    Price = models.DecimalField(max_digits=4, decimal_places=2)
     Inventory = models.IntegerField()
     
