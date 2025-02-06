@@ -8,6 +8,14 @@ class Booking(models.Model):
     
 class Menu(models.Model):
     Title = models.CharField(max_length=255)
-    Price = models.DecimalField(max_digits=4, decimal_places=2)
+    Price = models.DecimalField(max_digits=4, decimal_places=1)
     Inventory = models.IntegerField()
+    def __str__(self):
+        return f'{self.Title} : {str(self.Price)} {self.Inventory}'
+    
+class Drink(models.Model):
+    name = models.CharField(max_length=255)
+    temp = models.CharField(max_length=255)
+    def __str__(self):
+        return f'{self.name} : {self.temp}'
     
