@@ -2,7 +2,7 @@
 
 A restaurtant web app built with django.
 
-### Navigate to the following APIs:
+#### Navigate to the following APIs:
 restaurant/menu
 restaurant/booking
 auth/
